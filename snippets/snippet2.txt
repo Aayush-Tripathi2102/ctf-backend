@@ -1,0 +1,13 @@
+// HINT: APP WIDGET - MaterialApp setup
+class CaptureFlagDroidApp extends StatelessWidget {
+  const CaptureFlagDroidApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Capture the Flagdroid',
+      home: CaptureFlagDroidScreen(),
+    );
+  }
+}

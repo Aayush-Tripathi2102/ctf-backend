@@ -1,0 +1,13 @@
+// HINT: HELPER - Pixel-style text widget
+  Text _pixelText(String text, double size, {Color color = Colors.black}) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: "PixelFont",
+        fontSize: size,
+        height: 1.2,
+        color: color,
+      ),
+    );
+  }

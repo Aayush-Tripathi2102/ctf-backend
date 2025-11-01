@@ -1,0 +1,21 @@
+// HINT: DECOR - Small pixel blocks and bottom bars
+                        const SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(width: 8, height: 8, color: Color(0xFF1A3F3F)),
+                            const SizedBox(width: 5),
+                            Container(width: 8, height: 8, color: Color(0xFF1A3F3F)),
+                          ],
+                        ),
+                        const SizedBox(height: 5),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Container(width: 80, height: 20, color: Color(0xFF2C5F5F)),
+                  Container(width: 120, height: 10, color: Color(0xFF5A9999)),
+                ],
+              ),
+            ),
+            const SizedBox(height: 50),

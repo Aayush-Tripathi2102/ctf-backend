@@ -1,0 +1,7 @@
+// HINT: SCREEN - StatefulWidget declaration
+class CaptureFlagDroidScreen extends StatefulWidget {
+  const CaptureFlagDroidScreen({super.key});
+
+  @override
+  State<CaptureFlagDroidScreen> createState() => _CaptureFlagDroidScreenState();
+}

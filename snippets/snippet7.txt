@@ -1,0 +1,16 @@
+// HINT: SCAFFOLD - Main page layout and header
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      top: false,
+      child: Scaffold(
+        backgroundColor: const Color(0xFFE8F4F4),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 40),
+            Image(image: AssetImage("assets/images/Ac_Logo.png"), width: 80),
+            const SizedBox(height: 20),
+            _pixelText("CAPTURE THE", 26, color: Color(0xFF3D9999)),
+            _pixelText("FLAGDROID", 26, color: Color(0xFF3D9999)),
+            const SizedBox(height: 40),

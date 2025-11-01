@@ -1,0 +1,105 @@
+// HINT: PANEL - Score, level, time, and main message
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF5A9999),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(color: Color(0xFF2C5F5F)),
+                          padding: EdgeInsets.all(8),
+                          child: Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(color: Color(0xFFE8F4F4)),
+                            padding: EdgeInsets.all(15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'SCORE:\n',
+                                            style: TextStyle(
+                                              color: Color(0xFF2C5F5F),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '9999',
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'LEVEL:\n',
+                                            style: TextStyle(
+                                              color: Color(0xFF2C5F5F),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '08',
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'TIME:\n',
+                                            style: TextStyle(
+                                              color: Color(0xFF2C5F5F),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: DateFormat('HH:mm').format(DateTime.now()),
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                _pixelText(
+                                  "YOU HAVE\nCAPTURED\nTHE FLAG!",
+                                  20,
+                                  color: Color(0xFF4299E1),
+                                ),
+                                const SizedBox(height: 20),
