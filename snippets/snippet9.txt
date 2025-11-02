@@ -1,7 +1,38 @@
-// HINT: SCREEN - StatefulWidget declaration
-class CaptureFlagDroidScreen extends StatefulWidget {
-  const CaptureFlagDroidScreen({super.key});
+                  //ground layers
+                  final layer3 = height * 0.14;
+                  final layer4 = height * 0.12;
 
-  @override
-  State<CaptureFlagDroidScreen> createState() => _CaptureFlagDroidScreenState();
-}
+                  return Stack(
+                    children: [
+                      Container(color: const Color(0xFFEFF7F8)),
+
+                      Positioned(
+                        bottom: 0,
+                        width: width,
+                        height: layer1,
+                        child: Container(color: const Color(0xFF3A5C5A)),
+                      ),
+
+                      Positioned(
+                        bottom: layer1,
+                        width: width,
+                        height: layer2,
+                        child: Container(color: const Color(0xFF527C78)),
+                      ),
+
+                      Positioned(
+                        bottom: layer1 + layer2,
+                        width: width,
+                        height: layer3,
+                        child: Container(color: const Color(0xFF6C9693)),
+                      ),
+
+                      Positioned(
+                        bottom: layer1 + layer2 + layer3,
+                        width: width,
+                        height: layer4,
+                        child: Container(color: const Color(0xFFAAD0CD)),
+                      ),
+
+                      //// BUGDROID
+                      AnimatedBuilder(
