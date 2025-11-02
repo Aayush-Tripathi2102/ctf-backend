@@ -1,35 +1,10 @@
-// HINT: BADGE - Achievement unlocked panel
-                                Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Color(0xFF5A9999),
-                                      width: 2,
-                                    ),
-                                  ),
-                                  padding: EdgeInsets.all(10),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      FittedBox(
-                                        child: _pixelText(
-                                          "★ ACHIEVEMENT UNLOCKED ★",
-                                          13,
-                                          color: Color(0xFF2C5F5F),
-                                        ),
-                                      ),
-                                      const SizedBox(height: 5),
-                                      _pixelText(
-                                        "BYTE MASTER",
-                                        13,
-                                        color: Color(0xFF5A9999),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+  //dispose, textbuilder, logo
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
-
-// HINT: HELPER - Pixel-style text widget
   Text _pixelText(String text, double size, {Color color = Colors.black}) {
     return Text(
       text,
@@ -42,3 +17,23 @@
       ),
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      top: false,
+      child: Scaffold(
+        backgroundColor: const Color(0xFFE8F4F4),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 40),
+
+            Image(image: AssetImage("assets/images/Ac_Logo.png"), width: 80),
+
+            const SizedBox(height: 20),
+
+            _pixelText("CAPTURE THE", 26, color: Color(0xFF3D9999)),
+            _pixelText("FLAGDROID", 26, color: Color(0xFF3D9999)),
+
+            const SizedBox(height: 40),
