@@ -1,39 +1,20 @@
-// HINT: STATE & ANIMATION - Controller and jump animation
-class _CaptureFlagDroidScreenState extends State<CaptureFlagDroidScreen>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _jump;
-  final List<double> _pixelPositions = [];
+//class declaration
+class CaptureFlagDroidApp extends StatelessWidget {
+  const CaptureFlagDroidApp({super.key});
 
   @override
-  void initState() {
-    super.initState();
-    for (int i = 0; i < 16; i++) {
-      _pixelPositions.add((i * 20).toDouble());
-    }
-
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat();
-
-    _jump = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 0.0, end: -14.0)
-            .chain(CurveTween(curve: Curves.easeOut)),
-        weight: 30,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: -14.0, end: 0.0)
-            .chain(CurveTween(curve: Curves.easeIn)),
-        weight: 15,
-      ),
-      TweenSequenceItem(tween: ConstantTween<double>(0.0), weight: 55),
-    ]).animate(_controller);
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Capture the Flagdroid',
+      home: CaptureFlagDroidScreen(),
+    );
   }
+}
+
+class CaptureFlagDroidScreen extends StatefulWidget {
+  const CaptureFlagDroidScreen({super.key});
 
   @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  State<CaptureFlagDroidScreen> createState() => _CaptureFlagDroidScreenState();
+}
