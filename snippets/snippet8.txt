@@ -1,5 +1,4 @@
-// HINT: CHARACTERS - Bugdroid animation and flag
-                      AnimatedBuilder(
+                        //animated entities
                         animation: _jump,
                         builder: (_, child) {
                           return Positioned(
@@ -13,6 +12,8 @@
                           width: width * 0.20,
                         ),
                       ),
+
+                      //// FLAG
                       Positioned(
                         left: width * 0.65,
                         bottom: layer1 + layer2 + layer3 - 20,
