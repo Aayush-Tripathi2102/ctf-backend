@@ -1,3 +1,4 @@
+
                                           //pc top details 
                                           TextSpan(
                                             text: '9999',
@@ -66,3 +67,5 @@
                                 ),
 
                                 const SizedBox(height: 20),
+
+                                Container(
