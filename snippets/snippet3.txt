@@ -1,19 +1,68 @@
-// HINT: GROUND - Layered terrain setup
-            Expanded(
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final width = constraints.maxWidth;
-                  final height = constraints.maxHeight;
+                                          //pc top details 
+                                          TextSpan(
+                                            text: '9999',
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'LEVEL:\n',
+                                            style: TextStyle(
+                                              color: Color(0xFF2C5F5F),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '08',
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'TIME:\n',
+                                            style: TextStyle(
+                                              color: Color(0xFF2C5F5F),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: DateFormat('HH:mm').format(DateTime.now()),
+                                            style: TextStyle(
+                                              color: Color(0xFF5A9999),
+                                              fontFamily: 'PixelFont',
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
 
-                  final layer1 = height * 0.20;
-                  final layer2 = height * 0.16;
-                  final layer3 = height * 0.14;
-                  final layer4 = height * 0.12;
+                                const SizedBox(height: 20),
 
-                  return Stack(
-                    children: [
-                      Container(color: const Color(0xFFEFF7F8)),
-                      Positioned(bottom: 0, width: width, height: layer1, child: Container(color: const Color(0xFF3A5C5A))),
-                      Positioned(bottom: layer1, width: width, height: layer2, child: Container(color: const Color(0xFF527C78))),
-                      Positioned(bottom: layer1 + layer2, width: width, height: layer3, child: Container(color: const Color(0xFF6C9693))),
-                      Positioned(bottom: layer1 + layer2 + layer3, width: width, height: layer4, child: Container(color: const Color(0xFFAAD0CD))),
+                                _pixelText(
+                                  "YOU HAVE\nCAPTURED\nTHE FLAG!",
+                                  20,
+                                  color: Color(0xFF4299E1),
+                                ),
+
+                                const SizedBox(height: 20),
